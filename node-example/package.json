@@ -1,0 +1,14 @@
+{
+  "name": "web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Vagrant",
+  "author": "First Last <first.last@example.com>",
+  "main": "server.js",
+  "scripts": {
+    "test": "node src/server/server.js",
+    "start": "nohup node src/server/server.js > log/server.log &"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
