@@ -1,0 +1,156 @@
+/*
+ *  CARD LIST
+ *  Grid of 'cards' such as for blog and what-we-do
+ *
+ */
+
+/* Core Layout */
+.card-list {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.card-item {
+  position: relative;
+  display: flex; /* gives all items in a row the same height */
+  flex-direction: column;
+  padding: 10px 10px 0 10px;
+  vertical-align: top;
+
+  &:last-of-type {
+    padding-bottom: 10px;
+  }
+}
+
+/* Size of cards when INSIDE card-list */
+@media screen and (min-width: $bp-medium) {
+  .card-list {
+    display: flex; /* Basic row layout */
+    flex-wrap: wrap;
+    padding: 0 ($card-gutter-large * .5);
+
+    .card-item {
+      width: 50%;
+      padding: 0 ($card-gutter-large * .5) 30px ($card-gutter-large * .5);
+
+      &:last-of-type {
+        padding-bottom: $card-gutter-large;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $bp-larger) {
+  .card-list {
+    .card-item {
+      width: 33.333%;
+    }
+  }
+}
+
+
+
+
+
+@media screen and (min-width: $bp-medium) {
+  .card-list {
+    margin-top: $card-margin-offset; /* Pushes content up */
+  }
+}
+
+
+
+/* Card Image */
+.card-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+
+  .rimage {
+    height: $card-image-height;
+  }
+  .image-hover {
+    display: none; /* Remove these hover styles on smaller screens */
+    height: $card-image-height;
+  }
+}
+
+@media screen and (min-width: $bp-large) {
+  /* Show hovers styles for larger screens */
+  .card-item {
+    .image-hover {
+      display: flex;
+    }
+  }
+}
+
+/* Card Details */
+.card-details {
+  position: relative;
+  padding: $card-padding-small;
+  background-color: $offWhite;
+}
+
+@media screen and (min-width: $bp-medium) {
+  .card-details {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    padding: $card-padding-medium;
+  }
+}
+
+@media screen and (min-width: $bp-large) {
+  .card-details {
+    padding: $card-padding-large;
+  }
+}
+
+
+
+/* Category tags */
+.card-item {
+  .category-tag {
+    position: absolute;
+    top: - $category-tag-height * .5;
+  }
+}
+
+
+/* Text styles */
+.card-item {
+  .title {
+    font-size: 24px;
+
+    a {
+      transition: color $hover-duration-quick ease-in-out;
+    }
+  }
+
+  .excerpt {
+    margin: ($card-padding-small * .75) auto;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .tail {
+    text-align: right;
+    overflow: auto;
+
+    a {
+      display: inline-block;
+      float: left;
+      text-align: left;
+      border-bottom: 2px solid;
+    }
+  }
+}
+
+@media screen and (min-width: $bp-medium) {
+  .card-item {
+    .tail {
+      margin-top: auto;
+    }
+  }
+}

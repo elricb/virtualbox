@@ -1,0 +1,133 @@
+/*
+ *  SUBSCRIPTION
+ *  So users can subscribe to the ustwo mailing list
+ *
+ *  Notes: Requires functionality and visual states to handle the full submission within the website rather
+ *  than the current 'first-slice' which sends the user to a mailchimp page for confirmation.
+ *
+ *  Animation icon: height = 240px, width = 6237px with 27 frames. Divide dimensions by 3.
+ */
+
+
+@keyframes iconAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2002px 0;
+  }
+}
+
+
+.subscription {
+  $height: 400px;
+  $input-height: 50px;
+  $submit-button-width-small: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  border-bottom: 1px solid $nonBlack;
+  font-size: 18px;
+
+  .icon {
+    width: 77px;
+    height: 80px;
+    margin-bottom: 30px;
+    background: url("/images/news-icon-strip-animation.png") no-repeat 0 0;
+    background-size: 2079px 80px;
+
+    &.animate {
+      animation: iconAnimation 1.5s steps(26) 1;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    max-width: 480px;
+    padding: 0 20px;
+  }
+
+  form {
+    display: flex;
+    width: 320px;
+    padding: 0 10px;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .email,
+  .submit,
+  .submit:after {
+    height: $input-height;
+  }
+
+  .email {
+    flex: 1;
+    padding: 0 20px;
+    color: $nonBlack;
+  }
+
+  .submit {
+    width: $submit-button-width-small;
+    background: $blu;
+
+    .submit-text {
+      display: none;
+    }
+
+    &:active {
+      /* TODO: Use a 'darken' function here but the sass one doesn't seem to be working. Bad-sass! */
+      background: #007dc0;
+    }
+
+    &:after {
+      @include arrow-icon($white);
+
+      content: "";
+      position: relative;
+      display: inline-block;
+      width: $submit-button-width-small;
+      background-size: 13px 10px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(-90deg) scale(0.8);
+    }
+  }
+
+  @media screen and (min-width: $bp-small) {
+
+    form {
+      width: 480px;
+    }
+
+    .submit {
+      width: auto;
+      padding: 0 20px;
+
+      .submit-text {
+        display: inline;
+      }
+
+      &:after {
+        width: 13px;
+        height: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+}

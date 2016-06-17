@@ -1,0 +1,152 @@
+/*
+ *  STUDIO JOBS
+ *  Each studio specific section that houses the job-items
+ *
+ */
+
+.studio-jobs {
+
+  h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 26px;
+    color: $nonBlack;
+  }
+
+  .studio-info {
+    background: #777;
+
+    p {
+      margin: 0;
+    }
+    .excerpt {
+      padding: 10px 15px;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+    .studio-blurb {
+      display: none;
+    }
+    .photo {
+      height: 200px;
+    }
+  }
+
+
+  .jobs-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .jobs-none {
+    position: relative;
+    margin-top: 5px;
+    padding: 20px;
+    background: #fff;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      height: 40px;
+      margin-top: 10px;
+      padding: 0 30px 0 15px;
+      font-size: 18px;
+      line-height: 40px;
+      color: #fff;
+
+      &:after {
+        @include arrow-icon(#FFFFFF);
+
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 13px;
+        height: 10px;
+        margin-top: -5px;
+        background-position: 0 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &.all-studios-jobs {
+    display: none;
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    display: none;
+
+    &.selected {
+      display: block;
+    }
+
+    &.all-studios-jobs {
+      .studio-info {
+        display: none;
+      }
+    }
+
+    h3 {
+      display: none;
+    }
+
+    .studio-info {
+      display: flex;
+
+      > div {
+        width: 50%;
+      }
+
+      .info {
+        padding: 40px;
+      }
+
+      .excerpt {
+        padding: 0;
+        background: transparent;
+        font-size: 26px;
+      }
+
+      .studio-blurb {
+        position: relative;
+        display: block;
+        margin-top: 40px;
+        font-size: 16px;
+        color: #fff;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          left: 0;
+          width: 22px;
+          height: 2px;
+          background: #fff;
+        }
+      }
+
+      .photo {
+        height: auto;
+      }
+    }
+    .jobs-none {
+      p {
+        width: 65%;
+      }
+      a {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        margin-top: -20px;
+      }
+    }
+  }
+}

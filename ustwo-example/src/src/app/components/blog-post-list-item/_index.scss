@@ -1,0 +1,96 @@
+/*
+ *  BLOG POST LIST ITEM
+ *  Short excerpts and images of each blog post on the main /blog page
+ *
+ */
+
+.blog-post-list-item {
+
+  .meta {
+    margin-top: $card-padding-small * .75;
+    margin-bottom: 0;
+    color: $darkGrey;
+    font-family: $PxGroteskBold;
+    font-size: 16px;
+
+    .date {
+      font-family: $PxGroteskRegular;
+    }
+  }
+
+  .excerpt {
+    display: none;
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    .excerpt {
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      height: 76.2px;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+    .excerpt {
+      height: 84.2px;
+    }
+  }
+}
+
+
+
+@mixin pinned-post() {
+  width: 100%;
+
+  .card-image {
+    position: absolute;
+    right: $card-gutter-large * .5;
+    bottom: 30px;
+    top: 0;
+
+    .rimage,
+    .image-hover {
+      height: 100%;
+    }
+  }
+
+  .card-details {
+    height: 490px;
+
+    .category-tag {
+      position: relative;
+      align-self: flex-start; /* This stops the box (bg colour) from flexing and thus stop appearing like a block element */
+    }
+  }
+}
+
+/* Add some 'highlighted'/larger posts within the grid */
+@media screen and (min-width: $bp-medium) and (max-width: ($bp-larger - 1px)) {
+  .page-blog:not(.categorised) .card-list .card-item:nth-child(4),
+  .card-list .card-item.featured {
+    @include pinned-post();
+    .card-image {
+      width: 50%;
+    }
+    .card-details {
+      width: calc(50% - (#{$card-gutter-large} * .5));
+    }
+  }
+}
+@media screen and (min-width: $bp-larger) {
+  .page-blog:not(.categorised) .card-list .card-item:nth-child(5),
+  .page-blog:not(.categorised) .card-list .card-item:nth-child(12),
+  .card-list .card-item.featured {
+    @include pinned-post();
+    .card-image {
+      width: 66.666%;
+    }
+    .card-details {
+      width: calc(33.333% - (#{$card-gutter-large} * .5));
+    }
+  }
+}

@@ -1,0 +1,88 @@
+/*
+ *  BLOG CONTROLS
+ *  Blog search button and filter
+ *
+ *  Notes: This is the containing component for search and the dropdown buttons.
+ *         The dropdown list itself is a modal called blog-categories.
+ *  TODO: Bring variables in scope of component
+ */
+
+.blog-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  bottom: calc(#{$blog-controls-margin-bottom} + 9vh);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .blog-search-button {
+    display: flex;
+    align-items: center;
+    height: $blog-controls-line-height;
+    width: $blog-controls-search-width;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    .search-icon {
+      fill: #fff;
+      width: $blog-controls-line-height;
+      height: $blog-controls-line-height;
+      margin: 0 auto;
+    }
+  }
+
+  .blog-filter {
+    position: relative;
+    text-transform: uppercase;
+
+    .selected {
+      width: $blog-controls-item-width;
+      padding: 0 0 0 50px;
+
+      &:after {
+
+        @include arrow-icon($midGrey);
+
+        position: absolute;
+        left: $blog-controls-horizontal-padding;
+        top: 50%;
+        content: "";
+        display: block;
+        width: 13px;
+        height: 10px;
+        transform: translateY(-50%);
+      }
+    }
+    .selected {
+      cursor: pointer;
+      height: $blog-controls-line-height;
+      line-height: $blog-controls-line-height;
+      color: $nonBlack;
+      background-color: #fff;
+    }
+
+    .loading-icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -14px;
+      margin-right: 14px;
+    }
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    bottom: calc(#{$blog-controls-margin-bottom} - #{$card-margin-offset});
+
+    .blog-filter {
+
+      .selected {
+        width: $blog-controls-item-width;
+      }
+    }
+  }
+
+}

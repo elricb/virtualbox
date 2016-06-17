@@ -1,0 +1,755 @@
+Bringing machine 'compiler' up with 'virtualbox' provider...
+==> compiler: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> compiler: Matching MAC address for NAT networking...
+==> compiler: Checking if box 'ubuntu/trusty64' is up to date...
+==> compiler: A newer version of the box 'ubuntu/trusty64' is available! You currently
+==> compiler: have version '20160323.1.0'. The latest is version '20160602.0.0'. Run
+==> compiler: `vagrant box update` to update.
+==> compiler: Setting the name of the VM: react-example_compiler_1465569539933_55087
+==> compiler: Clearing any previously set forwarded ports...
+==> compiler: Clearing any previously set network interfaces...
+==> compiler: Preparing network interfaces based on configuration...
+    compiler: Adapter 1: nat
+==> compiler: Forwarding ports...
+    compiler: 8080 => 8080 (adapter 1)
+    compiler: 80 => 8081 (adapter 1)
+    compiler: 22 => 2222 (adapter 1)
+==> compiler: Booting VM...
+==> compiler: Waiting for machine to boot. This may take a few minutes...
+    compiler: SSH address: 127.0.0.1:2222
+    compiler: SSH username: vagrant
+    compiler: SSH auth method: private key
+    compiler: Warning: Connection timeout. Retrying...
+    compiler: Warning: Remote connection disconnect. Retrying...
+    compiler: 
+    compiler: Vagrant insecure key detected. Vagrant will automatically replace
+    compiler: this with a newly generated keypair for better security.
+    compiler: 
+    compiler: Inserting generated public key within guest...
+    compiler: Removing insecure key from the guest if it's present...
+    compiler: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> compiler: Machine booted and ready!
+==> compiler: Checking for guest additions in VM...
+==> compiler: Mounting shared folders...
+    compiler: /vagrant => /Users/elricb/Projects/dev-tools/projects/virtualbox/react-example
+    compiler: /home/app => /Users/elricb/Projects/dev-tools/projects/virtualbox/react-example
+==> compiler: Running provisioner: shell...
+    compiler: Running: inline script
+==> compiler: stdin: is not a tty
+==> compiler: Multi-Machine Setup
+==> compiler: Running provisioner: shell...
+    compiler: Running: /var/folders/q3/w_4ysmjd5fx2g74cxdz1_sh80000gp/T/vagrant-shell20160610-31377-1gkq51j.sh
+==> compiler: stdin: is not a tty
+==> compiler: Ign http://archive.ubuntu.com trusty InRelease
+==> compiler: Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+==> compiler: Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+==> compiler: Get:3 http://security.ubuntu.com trusty-security/main Sources [117 kB]
+==> compiler: Get:4 http://archive.ubuntu.com trusty-backports InRelease [65.9 kB]
+==> compiler: Hit http://archive.ubuntu.com trusty Release.gpg
+==> compiler: Get:5 http://security.ubuntu.com trusty-security/universe Sources [37.3 kB]
+==> compiler: Get:6 http://archive.ubuntu.com trusty-updates/main Sources [277 kB]
+==> compiler: Get:7 http://security.ubuntu.com trusty-security/main amd64 Packages [493 kB]
+==> compiler: Get:8 http://archive.ubuntu.com trusty-updates/restricted Sources [5,352 B]
+==> compiler: Get:9 http://archive.ubuntu.com trusty-updates/universe Sources [156 kB]
+==> compiler: Get:10 http://security.ubuntu.com trusty-security/universe amd64 Packages [130 kB]
+==> compiler: Get:11 http://security.ubuntu.com trusty-security/main Translation-en [271 kB]
+==> compiler: Get:12 http://archive.ubuntu.com trusty-updates/multiverse Sources [5,939 B]
+==> compiler: Get:13 http://archive.ubuntu.com trusty-updates/main amd64 Packages [781 kB]
+==> compiler: Get:14 http://security.ubuntu.com trusty-security/universe Translation-en [76.6 kB]
+==> compiler: Get:15 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.9 kB]
+==> compiler: Get:16 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [361 kB]
+==> compiler: Get:17 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [13.2 kB]
+==> compiler: Get:18 http://archive.ubuntu.com trusty-updates/main Translation-en [391 kB]
+==> compiler: Get:19 http://archive.ubuntu.com trusty-updates/multiverse Translation-en [7,227 B]
+==> compiler: Get:20 http://archive.ubuntu.com trusty-updates/restricted Translation-en [3,699 B]
+==> compiler: Get:21 http://archive.ubuntu.com trusty-updates/universe Translation-en [189 kB]
+==> compiler: Get:22 http://archive.ubuntu.com trusty-backports/main Sources [9,551 B]
+==> compiler: Get:23 http://archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+==> compiler: Get:24 http://archive.ubuntu.com trusty-backports/universe Sources [35.2 kB]
+==> compiler: Get:25 http://archive.ubuntu.com trusty-backports/multiverse Sources [1,898 B]
+==> compiler: Get:26 http://archive.ubuntu.com trusty-backports/main amd64 Packages [13.3 kB]
+==> compiler: Get:27 http://archive.ubuntu.com trusty-backports/restricted amd64 Packages [28 B]
+==> compiler: Get:28 http://archive.ubuntu.com trusty-backports/universe amd64 Packages [43.2 kB]
+==> compiler: Get:29 http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1,571 B]
+==> compiler: Get:30 http://archive.ubuntu.com trusty-backports/main Translation-en [7,505 B]
+==> compiler: Get:31 http://archive.ubuntu.com trusty-backports/multiverse Translation-en [1,215 B]
+==> compiler: Get:32 http://archive.ubuntu.com trusty-backports/restricted Translation-en [28 B]
+==> compiler: Get:33 http://archive.ubuntu.com trusty-backports/universe Translation-en [36.8 kB]
+==> compiler: Hit http://archive.ubuntu.com trusty Release
+==> compiler: Get:34 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+==> compiler: Get:35 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+==> compiler: Get:36 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+==> compiler: Get:37 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+==> compiler: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> compiler: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> compiler: Fetched 11.3 MB in 14s (792 kB/s)
+==> compiler: Reading package lists...
+==> compiler: Reading package lists...
+==> compiler: Building dependency tree...
+==> compiler: Reading state information...
+==> compiler: curl is already the newest version.
+==> compiler: The following extra packages will be installed:
+==> compiler:   apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+==> compiler:   libaprutil1-ldap ssl-cert
+==> compiler: Suggested packages:
+==> compiler:   apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+==> compiler:   openssl-blacklist
+==> compiler: The following NEW packages will be installed:
+==> compiler:   apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+==> compiler:   libaprutil1-ldap ssl-cert
+==> compiler: 0 upgraded, 8 newly installed, 0 to remove and 62 not upgraded.
+==> compiler: Need to get 1,283 kB of archives.
+==> compiler: After this operation, 5,348 kB of additional disk space will be used.
+==> compiler: Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+==> compiler: Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+==> compiler: Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+==> compiler: Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8,634 B]
+==> compiler: Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.9 [839 kB]
+==> compiler: Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.9 [160 kB]
+==> compiler: Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.9 [87.5 kB]
+==> compiler: Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+==> compiler: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> compiler: Fetched 1,283 kB in 6s (195 kB/s)
+==> compiler: Selecting previously unselected package libapr1:amd64.
+==> compiler: (Reading database ... 62985 files and directories currently installed.)
+==> compiler: Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+==> compiler: Unpacking libapr1:amd64 (1.5.0-1) ...
+==> compiler: Selecting previously unselected package libaprutil1:amd64.
+==> compiler: Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+==> compiler: Unpacking libaprutil1:amd64 (1.5.3-1) ...
+==> compiler: Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+==> compiler: Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+==> compiler: Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+==> compiler: Selecting previously unselected package libaprutil1-ldap:amd64.
+==> compiler: Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+==> compiler: Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+==> compiler: Selecting previously unselected package apache2-bin.
+==> compiler: Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.9_amd64.deb ...
+==> compiler: Unpacking apache2-bin (2.4.7-1ubuntu4.9) ...
+==> compiler: Selecting previously unselected package apache2-data.
+==> compiler: Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.9_all.deb ...
+==> compiler: Unpacking apache2-data (2.4.7-1ubuntu4.9) ...
+==> compiler: Selecting previously unselected package apache2.
+==> compiler: Preparing to unpack .../apache2_2.4.7-1ubuntu4.9_amd64.deb ...
+==> compiler: Unpacking apache2 (2.4.7-1ubuntu4.9) ...
+==> compiler: Selecting previously unselected package ssl-cert.
+==> compiler: Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+==> compiler: Unpacking ssl-cert (1.0.33) ...
+==> compiler: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> compiler: Processing triggers for ureadahead (0.100.0-16) ...
+==> compiler: Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+==> compiler: Setting up libapr1:amd64 (1.5.0-1) ...
+==> compiler: Setting up libaprutil1:amd64 (1.5.3-1) ...
+==> compiler: Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+==> compiler: Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+==> compiler: Setting up apache2-bin (2.4.7-1ubuntu4.9) ...
+==> compiler: Setting up apache2-data (2.4.7-1ubuntu4.9) ...
+==> compiler: Setting up apache2 (2.4.7-1ubuntu4.9) ...
+==> compiler: Enabling module mpm_event.
+==> compiler: Enabling module authz_core.
+==> compiler: Enabling module authz_host.
+==> compiler: Enabling module authn_core.
+==> compiler: Enabling module auth_basic.
+==> compiler: Enabling module access_compat.
+==> compiler: Enabling module authn_file.
+==> compiler: Enabling module authz_user.
+==> compiler: Enabling module alias.
+==> compiler: Enabling module dir.
+==> compiler: Enabling module autoindex.
+==> compiler: Enabling module env.
+==> compiler: Enabling module mime.
+==> compiler: Enabling module negotiation.
+==> compiler: Enabling module setenvif.
+==> compiler: Enabling module filter.
+==> compiler: Enabling module deflate.
+==> compiler: Enabling module status.
+==> compiler: Enabling conf charset.
+==> compiler: Enabling conf localized-error-pages.
+==> compiler: Enabling conf other-vhosts-access-log.
+==> compiler: Enabling conf security.
+==> compiler: Enabling conf serve-cgi-bin.
+==> compiler: Enabling site 000-default.
+==> compiler:  * Starting web server apache2
+==> compiler: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.0.2.15. Set the 'ServerName' directive globally to suppress this message
+==> compiler:  * 
+==> compiler: Setting up ssl-cert (1.0.33) ...
+==> compiler: Processing triggers for libc-bin (2.19-0ubuntu6.7) ...
+==> compiler: Processing triggers for ureadahead (0.100.0-16) ...
+==> compiler: Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+==> compiler: ## Installing the NodeSource Node.js 6.x repo...
+==> compiler: ## Populating apt-get cache...
+==> compiler: + apt-get update
+==> compiler: Hit http://security.ubuntu.com trusty-security InRelease
+==> compiler: Ign http://archive.ubuntu.com trusty InRelease
+==> compiler: Hit http://archive.ubuntu.com trusty-updates InRelease
+==> compiler: Hit http://security.ubuntu.com trusty-security/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> compiler: Hit http://security.ubuntu.com trusty-security/universe Sources
+==> compiler: Hit http://archive.ubuntu.com trusty Release.gpg
+==> compiler: Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/main Sources
+==> compiler: Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+==> compiler: Hit http://security.ubuntu.com trusty-security/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+==> compiler: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty Release
+==> compiler: Hit http://archive.ubuntu.com trusty/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/universe Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> compiler: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> compiler: Reading package lists...
+==> compiler: ## Confirming "trusty" is supported...
+==> compiler: + curl -sLf -o /dev/null 'https://deb.nodesource.com/node_6.x/dists/trusty/Release'
+==> compiler: ## Adding the NodeSource signing key to your keyring...
+==> compiler: + curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+==> compiler: OK
+==> compiler: ## Creating apt sources list file for the NodeSource Node.js 6.x repo...
+==> compiler: + echo 'deb https://deb.nodesource.com/node_6.x trusty main' > /etc/apt/sources.list.d/nodesource.list
+==> compiler: + echo 'deb-src https://deb.nodesource.com/node_6.x trusty main' >> /etc/apt/sources.list.d/nodesource.list
+==> compiler: ## Running `apt-get update` for you...
+==> compiler: + apt-get update
+==> compiler: Hit http://security.ubuntu.com trusty-security InRelease
+==> compiler: Hit http://security.ubuntu.com trusty-security/main Sources
+==> compiler: Hit http://security.ubuntu.com trusty-security/universe Sources
+==> compiler: Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+==> compiler: Ign http://archive.ubuntu.com trusty InRelease
+==> compiler: Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+==> compiler: Hit http://security.ubuntu.com trusty-security/main Translation-en
+==> compiler: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-updates InRelease
+==> compiler: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> compiler: Hit http://archive.ubuntu.com trusty Release.gpg
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+==> compiler: Get:1 https://deb.nodesource.com trusty InRelease
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+==> compiler: Get:2 https://deb.nodesource.com trusty/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+==> compiler: Get:3 https://deb.nodesource.com trusty/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+==> compiler: Get:4 https://deb.nodesource.com trusty/main Translation-en_US
+==> compiler: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+==> compiler: Ign https://deb.nodesource.com trusty/main Translation-en_US
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+==> compiler: Ign https://deb.nodesource.com trusty/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty Release
+==> compiler: Hit http://archive.ubuntu.com trusty/main Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/universe Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse Sources
+==> compiler: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+==> compiler: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> compiler: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> compiler: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> compiler: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> compiler: Fetched 5,643 B in 11s (510 B/s)
+==> compiler: Reading package lists...
+==> compiler: ## Run `apt-get install nodejs` (as root) to install Node.js 6.x and npm
+==> compiler: Reading package lists...
+==> compiler: Building dependency tree...
+==> compiler: Reading state information...
+==> compiler: The following extra packages will be installed:
+==> compiler:   rlwrap
+==> compiler: The following NEW packages will be installed:
+==> compiler:   nodejs rlwrap
+==> compiler: 0 upgraded, 2 newly installed, 0 to remove and 62 not upgraded.
+==> compiler: Need to get 9,458 kB of archives.
+==> compiler: After this operation, 47.0 MB of additional disk space will be used.
+==> compiler: Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe rlwrap amd64 0.37-5 [73.4 kB]
+==> compiler: Get:2 https://deb.nodesource.com/node_6.x/ trusty/main nodejs amd64 6.2.1-1nodesource1~trusty1 [9,385 kB]
+==> compiler: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> compiler: Fetched 9,458 kB in 9s (957 kB/s)
+==> compiler: Selecting previously unselected package rlwrap.
+==> compiler: (Reading database ... 63628 files and directories currently installed.)
+==> compiler: Preparing to unpack .../rlwrap_0.37-5_amd64.deb ...
+==> compiler: Unpacking rlwrap (0.37-5) ...
+==> compiler: Selecting previously unselected package nodejs.
+==> compiler: Preparing to unpack .../nodejs_6.2.1-1nodesource1~trusty1_amd64.deb ...
+==> compiler: Unpacking nodejs (6.2.1-1nodesource1~trusty1) ...
+==> compiler: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> compiler: Setting up rlwrap (0.37-5) ...
+==> compiler: update-alternatives: 
+==> compiler: using /usr/bin/rlwrap to provide /usr/bin/readline-editor (readline-editor) in auto mode
+==> compiler: Setting up nodejs (6.2.1-1nodesource1~trusty1) ...
+==> compiler: ln: 
+==> compiler: failed to create symbolic link ‘/usr/bin/node’
+==> compiler: : File exists
+==> compiler: Enabling module rewrite.
+==> compiler: To activate the new configuration, you need to run:
+==> compiler:   service apache2 restart
+==> compiler: sed: can't read /etc/apache2/sites-available/default: No such file or directory
+==> compiler:  * Restarting web server apache2
+==> compiler: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.0.2.15. Set the 'ServerName' directive globally to suppress this message
+==> compiler:    ...done.
+==> compiler: react-example@1.0.0 /home/app/src
+==> compiler: ├─┬ babel-loader@6.2.4 
+==> compiler: │ ├─┬ loader-utils@0.2.15 
+==> compiler: │ │ ├── big.js@3.1.3 
+==> compiler: │ │ ├── emojis-list@2.0.1 
+==> compiler: │ │ └── json5@0.5.0 
+==> compiler: │ ├─┬ mkdirp@0.5.1 
+==> compiler: │ │ └── minimist@0.0.8 
+==> compiler: │ └── object-assign@4.1.0 
+==> compiler: ├─┬ babel-preset-es2015@6.9.0 
+==> compiler: │ ├─┬ babel-plugin-check-es2015-constants@6.8.0 
+==> compiler: │ │ └─┬ babel-runtime@6.9.2 
+==> compiler: │ │   ├── core-js@2.4.0 
+==> compiler: │ │   └── regenerator-runtime@0.9.5 
+==> compiler: │ ├── babel-plugin-transform-es2015-arrow-functions@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-block-scoped-functions@6.8.0 
+==> compiler: │ ├─┬ babel-plugin-transform-es2015-block-scoping@6.9.0 
+==> compiler: │ │ ├── babel-template@6.9.0 
+==> compiler: │ │ ├─┬ babel-traverse@6.9.0 
+==> compiler: │ │ │ ├─┬ babel-code-frame@6.8.0 
+==> compiler: │ │ │ │ └─┬ chalk@1.1.3 
+==> compiler: │ │ │ │   ├── ansi-styles@2.2.1 
+==> compiler: │ │ │ │   ├── escape-string-regexp@1.0.5 
+==> compiler: │ │ │ │   ├── has-ansi@2.0.0 
+==> compiler: │ │ │ │   └── supports-color@2.0.0 
+==> compiler: │ │ │ ├── globals@8.18.0 
+==> compiler: │ │ │ └── invariant@2.2.1 
+==> compiler: │ │ └─┬ babel-types@6.9.1 
+==> compiler: │ │   ├── esutils@2.0.2 
+==> compiler: │ │   └── to-fast-properties@1.0.2 
+==> compiler: │ ├─┬ babel-plugin-transform-es2015-classes@6.9.0 
+==> compiler: │ │ ├── babel-helper-define-map@6.9.0 
+==> compiler: │ │ ├── babel-helper-function-name@6.8.0 
+==> compiler: │ │ ├── babel-helper-optimise-call-expression@6.8.0 
+==> compiler: │ │ ├── babel-helper-replace-supers@6.8.0 
+==> compiler: │ │ └── babel-messages@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-computed-properties@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-destructuring@6.9.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-duplicate-keys@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-for-of@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-function-name@6.9.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-literals@6.8.0 
+==> compiler: │ ├─┬ babel-plugin-transform-es2015-modules-commonjs@6.8.0 
+==> compiler: │ │ └── babel-plugin-transform-strict-mode@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-object-super@6.8.0 
+==> compiler: │ ├─┬ babel-plugin-transform-es2015-parameters@6.9.0 
+==> compiler: │ │ ├─┬ babel-helper-call-delegate@6.8.0 
+==> compiler: │ │ │ └── babel-helper-hoist-variables@6.8.0 
+==> compiler: │ │ └── babel-helper-get-function-arity@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-shorthand-properties@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-spread@6.8.0 
+==> compiler: │ ├─┬ babel-plugin-transform-es2015-sticky-regex@6.8.0 
+==> compiler: │ │ └── babel-helper-regex@6.9.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-template-literals@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-es2015-typeof-symbol@6.8.0 
+==> compiler: │ ├─┬ babel-plugin-transform-es2015-unicode-regex@6.8.0 
+==> compiler: │ │ └─┬ regexpu-core@1.0.0 
+==> compiler: │ │   ├── regenerate@1.3.1 
+==> compiler: │ │   ├── regjsgen@0.2.0 
+==> compiler: │ │   └─┬ regjsparser@0.1.5 
+==> compiler: │ │     └── jsesc@0.5.0 
+==> compiler: │ └─┬ babel-plugin-transform-regenerator@6.9.0 
+==> compiler: │   ├─┬ babel-core@6.9.1 
+==> compiler: │   │ ├─┬ babel-generator@6.9.0 
+==> compiler: │   │ │ └─┬ detect-indent@3.0.1 
+==> compiler: │   │ │   ├── get-stdin@4.0.1 
+==> compiler: │   │ │   ├── minimist@1.2.0 
+==> compiler: │   │ │   └─┬ repeating@1.1.3 
+==> compiler: │   │ │     └─┬ is-finite@1.0.1 
+==> compiler: │   │ │       └── number-is-nan@1.0.0 
+==> compiler: │   │ ├── babel-helpers@6.8.0 
+==> compiler: │   │ ├─┬ babel-register@6.9.0 
+==> compiler: │   │ │ ├─┬ home-or-tmp@1.0.0 
+==> compiler: │   │ │ │ ├── os-tmpdir@1.0.1 
+==> compiler: │   │ │ │ └── user-home@1.1.1 
+==> compiler: │   │ │ └─┬ source-map-support@0.2.10 
+==> compiler: │   │ │   └── source-map@0.1.32 
+==> compiler: │   │ ├── convert-source-map@1.2.0 
+==> compiler: │   │ ├── json5@0.4.0 
+==> compiler: │   │ ├─┬ minimatch@2.0.10 
+==> compiler: │   │ │ └─┬ brace-expansion@1.1.4 
+==> compiler: │   │ │   ├── balanced-match@0.4.1 
+==> compiler: │   │ │   └── concat-map@0.0.1 
+==> compiler: │   │ ├── path-exists@1.0.0 
+==> compiler: │   │ ├── path-is-absolute@1.0.0 
+==> compiler: │   │ ├── shebang-regex@1.0.0 
+==> compiler: │   │ └── slash@1.0.0 
+==> compiler: │   ├── babel-plugin-syntax-async-functions@6.8.0 
+==> compiler: │   ├── babylon@6.8.1 
+==> compiler: │   └── private@0.1.6 
+==> compiler: ├─┬ babel-preset-react@6.5.0 
+==> compiler: │ ├── babel-plugin-syntax-flow@6.8.0 
+==> compiler: │ ├── babel-plugin-syntax-jsx@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-flow-strip-types@6.8.0 
+==> compiler: │ ├── babel-plugin-transform-react-display-name@6.8.0 
+==> compiler: │ ├─┬ babel-plugin-transform-react-jsx@6.8.0 
+==> compiler: │ │ └── babel-helper-builder-react-jsx@6.9.0 
+==> compiler: │ └── babel-plugin-transform-react-jsx-source@6.9.0 
+==> compiler: ├─┬ extract-text-webpack-plugin@1.0.1 
+==> compiler: │ ├── async@1.5.2 
+==> compiler: │ └─┬ webpack-sources@0.1.2 
+==> compiler: │   ├── source-list-map@0.1.6 
+==> compiler: │   └── source-map@0.5.6 
+==> compiler: ├─┬ html-webpack-plugin@2.20.0 
+==> compiler: │ ├── bluebird@3.4.0 
+==> compiler: │ ├─┬ html-minifier@2.1.3 
+==> compiler: │ │ ├─┬ change-case@2.3.1 
+==> compiler: │ │ │ ├── camel-case@1.2.2 
+==> compiler: │ │ │ ├── constant-case@1.1.2 
+==> compiler: │ │ │ ├── dot-case@1.1.2 
+==> compiler: │ │ │ ├── is-lower-case@1.1.3 
+==> compiler: │ │ │ ├── is-upper-case@1.1.2 
+==> compiler: │ │ │ ├── lower-case@1.1.3 
+==> compiler: │ │ │ ├── lower-case-first@1.0.2 
+==> compiler: │ │ │ ├── param-case@1.1.2 
+==> compiler: │ │ │ ├── pascal-case@1.1.2 
+==> compiler: │ │ │ ├── path-case@1.1.2 
+==> compiler: │ │ │ ├── sentence-case@1.1.3 
+==> compiler: │ │ │ ├── snake-case@1.1.2 
+==> compiler: │ │ │ ├── swap-case@1.1.2 
+==> compiler: │ │ │ ├── title-case@1.1.2 
+==> compiler: │ │ │ ├── upper-case@1.1.3 
+==> compiler: │ │ │ └── upper-case-first@1.1.2 
+==> compiler: │ │ ├─┬ clean-css@3.4.17 
+==> compiler: │ │ │ ├── commander@2.8.1 
+==> compiler: │ │ │ └── source-map@0.4.4 
+==> compiler: │ │ ├─┬ commander@2.9.0 
+==> compiler: │ │ │ └── graceful-readlink@1.0.1 
+==> compiler: │ │ ├── he@1.1.0 
+==> compiler: │ │ ├─┬ ncname@1.0.0 
+==> compiler: │ │ │ └── xml-char-classes@1.0.0 
+==> compiler: │ │ └── relateurl@0.2.6 
+==> compiler: │ ├── lodash@4.13.1 
+==> compiler: │ ├─┬ pretty-error@2.0.0 
+==> compiler: │ │ ├─┬ renderkid@2.0.0 
+==> compiler: │ │ │ ├─┬ css-select@1.2.0 
+==> compiler: │ │ │ │ ├── boolbase@1.0.0 
+==> compiler: │ │ │ │ ├── css-what@2.1.0 
+==> compiler: │ │ │ │ ├─┬ domutils@1.5.1 
+==> compiler: │ │ │ │ │ └─┬ dom-serializer@0.1.0 
+==> compiler: │ │ │ │ │   ├── domelementtype@1.1.3 
+==> compiler: │ │ │ │ │   └── entities@1.1.1 
+==> compiler: │ │ │ │ └── nth-check@1.0.1 
+==> compiler: │ │ │ ├─┬ dom-converter@0.1.4 
+==> compiler: │ │ │ │ └── utila@0.3.3 
+==> compiler: │ │ │ ├─┬ htmlparser2@3.3.0 
+==> compiler: │ │ │ │ ├── domelementtype@1.3.0 
+==> compiler: │ │ │ │ ├── domhandler@2.1.0 
+==> compiler: │ │ │ │ └── domutils@1.1.6 
+==> compiler: │ │ │ └── utila@0.3.3 
+==> compiler: │ │ └── utila@0.4.0 
+==> compiler: │ └── toposort@1.0.0 
+==> compiler: ├─┬ path@0.12.7 
+==> compiler: │ ├── process@0.11.4 
+==> compiler: │ └─┬ util@0.10.3 
+==> compiler: │   └── inherits@2.0.1 
+==> compiler: ├─┬ react@15.1.0 
+==> compiler: │ ├─┬ fbjs@0.8.3 
+==> compiler: │ │ ├── core-js@1.2.6 
+==> compiler: │ │ ├── immutable@3.8.1 
+==> compiler: │ │ ├─┬ isomorphic-fetch@2.2.1 
+==> compiler: │ │ │ ├─┬ node-fetch@1.5.3 
+==> compiler: │ │ │ │ ├─┬ encoding@0.1.12 
+==> compiler: │ │ │ │ │ └── iconv-lite@0.4.13 
+==> compiler: │ │ │ │ └── is-stream@1.1.0 
+==> compiler: │ │ │ └── whatwg-fetch@1.0.0 
+==> compiler: │ │ ├─┬ promise@7.1.1 
+==> compiler: │ │ │ └── asap@2.0.4 
+==> compiler: │ │ └── ua-parser-js@0.7.10 
+==> compiler: │ └─┬ loose-envify@1.2.0 
+==> compiler: │   └── js-tokens@1.0.3 
+==> compiler: ├── react-dom@15.1.0 
+==> compiler: ├─┬ webpack@1.13.1 
+==> compiler: │ ├── acorn@3.2.0 
+==> compiler: │ ├── clone@1.0.2 
+==> compiler: │ ├─┬ enhanced-resolve@0.9.1 
+==> compiler: │ │ ├── graceful-fs@4.1.4 
+==> compiler: │ │ └── memory-fs@0.2.0 
+==> compiler: │ ├── interpret@0.6.6 
+==> compiler: │ ├─┬ memory-fs@0.3.0 
+==> compiler: │ │ ├─┬ errno@0.1.4 
+==> compiler: │ │ │ └── prr@0.0.0 
+==> compiler: │ │ └─┬ readable-stream@2.1.4 
+==> compiler: │ │   ├── buffer-shims@1.0.0 
+==> compiler: │ │   ├── core-util-is@1.0.2 
+==> compiler: │ │   ├── isarray@1.0.0 
+==> compiler: │ │   ├── process-nextick-args@1.0.7 
+==> compiler: │ │   └── util-deprecate@1.0.2 
+==> compiler: │ ├─┬ node-libs-browser@0.5.3 
+==> compiler: │ │ ├── assert@1.4.1 
+==> compiler: │ │ ├─┬ browserify-zlib@0.1.4 
+==> compiler: │ │ │ └── pako@0.2.8 
+==> compiler: │ │ ├─┬ buffer@3.6.0 
+==> compiler: │ │ │ ├── base64-js@0.0.8 
+==> compiler: │ │ │ ├── ieee754@1.1.6 
+==> compiler: │ │ │ └── isarray@1.0.0 
+==> compiler: │ │ ├─┬ console-browserify@1.1.0 
+==> compiler: │ │ │ └── date-now@0.1.4 
+==> compiler: │ │ ├── constants-browserify@0.0.1 
+==> compiler: │ │ ├─┬ crypto-browserify@3.2.8 
+==> compiler: │ │ │ ├── pbkdf2-compat@2.0.1 
+==> compiler: │ │ │ ├── ripemd160@0.2.0 
+==> compiler: │ │ │ └── sha.js@2.2.6 
+==> compiler: │ │ ├── domain-browser@1.1.7 
+==> compiler: │ │ ├── events@1.1.0 
+==> compiler: │ │ ├─┬ http-browserify@1.7.0 
+==> compiler: │ │ │ └── Base64@0.2.1 
+==> compiler: │ │ ├── https-browserify@0.0.0 
+==> compiler: │ │ ├── os-browserify@0.1.2 
+==> compiler: │ │ ├── path-browserify@0.0.0 
+==> compiler: │ │ ├── punycode@1.4.1 
+==> compiler: │ │ ├── querystring-es3@0.2.1 
+==> compiler: │ │ ├─┬ readable-stream@1.1.14 
+==> compiler: │ │ │ └── isarray@0.0.1 
+==> compiler: │ │ ├─┬ stream-browserify@1.0.0 
+==> compiler: │ │ │ └── readable-stream@1.0.34 
+==> compiler: │ │ ├── string_decoder@0.10.31 
+==> compiler: │ │ ├── timers-browserify@1.4.2 
+==> compiler: │ │ ├── tty-browserify@0.0.0 
+==> compiler: │ │ ├─┬ url@0.10.3 
+==> compiler: │ │ │ ├── punycode@1.3.2 
+==> compiler: │ │ │ └── querystring@0.2.0 
+==> compiler: │ │ └─┬ vm-browserify@0.0.4 
+==> compiler: │ │   └── indexof@0.0.1 
+==> compiler: │ ├─┬ optimist@0.6.1 
+==> compiler: │ │ └── wordwrap@0.0.2 
+==> compiler: │ ├─┬ supports-color@3.1.2 
+==> compiler: │ │ └── has-flag@1.0.0 
+==> compiler: │ ├── tapable@0.1.10 
+==> compiler: │ ├─┬ uglify-js@2.6.2 
+==> compiler: │ │ ├── async@0.2.10 
+==> compiler: │ │ ├── uglify-to-browserify@1.0.2 
+==> compiler: │ │ └─┬ yargs@3.10.0 
+==> compiler: │ │   ├── camelcase@1.2.1 
+==> compiler: │ │   ├─┬ cliui@2.1.0 
+==> compiler: │ │   │ ├─┬ center-align@0.1.3 
+==> compiler: │ │   │ │ ├─┬ align-text@0.1.4 
+==> compiler: │ │   │ │ │ ├── longest@1.0.1 
+==> compiler: │ │   │ │ │ └── repeat-string@1.5.4 
+==> compiler: │ │   │ │ └── lazy-cache@1.0.4 
+==> compiler: │ │   │ └── right-align@0.1.3 
+==> compiler: │ │   ├── decamelize@1.2.0 
+==> compiler: │ │   └── window-size@0.1.0 
+==> compiler: │ ├─┬ watchpack@0.2.9 
+==> compiler: │ │ ├── async@0.9.2 
+==> compiler: │ │ └─┬ chokidar@1.5.2 
+==> compiler: │ │   ├─┬ anymatch@1.3.0 
+==> compiler: │ │   │ ├── arrify@1.0.1 
+==> compiler: │ │   │ └─┬ micromatch@2.3.8 
+==> compiler: │ │   │   ├─┬ arr-diff@2.0.0 
+==> compiler: │ │   │   │ └── arr-flatten@1.0.1 
+==> compiler: │ │   │   ├── array-unique@0.2.1 
+==> compiler: │ │   │   ├─┬ braces@1.8.5 
+==> compiler: │ │   │   │ ├─┬ expand-range@1.8.2 
+==> compiler: │ │   │   │ │ └─┬ fill-range@2.2.3 
+==> compiler: │ │   │   │ │   ├── is-number@2.1.0 
+==> compiler: │ │   │   │ │   ├─┬ isobject@2.1.0 
+==> compiler: │ │   │   │ │   │ └── isarray@1.0.0 
+==> compiler: │ │   │   │ │   └── randomatic@1.1.5 
+==> compiler: │ │   │   │ ├── preserve@0.2.0 
+==> compiler: │ │   │   │ └── repeat-element@1.1.2 
+==> compiler: │ │   │   ├─┬ expand-brackets@0.1.5 
+==> compiler: │ │   │   │ └── is-posix-bracket@0.1.1 
+==> compiler: │ │   │   ├── extglob@0.3.2 
+==> compiler: │ │   │   ├── filename-regex@2.0.0 
+==> compiler: │ │   │   ├─┬ kind-of@3.0.3 
+==> compiler: │ │   │   │ └── is-buffer@1.1.3 
+==> compiler: │ │   │   ├── normalize-path@2.0.1 
+==> compiler: │ │   │   ├─┬ object.omit@2.0.0 
+==> compiler: │ │   │   │ ├─┬ for-own@0.1.4 
+==> compiler: │ │   │   │ │ └── for-in@0.1.5 
+==> compiler: │ │   │   │ └── is-extendable@0.1.1 
+==> compiler: │ │   │   ├─┬ parse-glob@3.0.4 
+==> compiler: │ │   │   │ ├── glob-base@0.3.0 
+==> compiler: │ │   │   │ └── is-dotfile@1.0.2 
+==> compiler: │ │   │   └─┬ regex-cache@0.4.3 
+==> compiler: │ │   │     ├── is-equal-shallow@0.1.3 
+==> compiler: │ │   │     └── is-primitive@2.0.0 
+==> compiler: │ │   ├── async-each@1.0.0 
+==> compiler: │ │   ├── glob-parent@2.0.0 
+==> compiler: │ │   ├─┬ is-binary-path@1.0.1 
+==> compiler: │ │   │ └── binary-extensions@1.4.1 
+==> compiler: │ │   ├─┬ is-glob@2.0.1 
+==> compiler: │ │   │ └── is-extglob@1.0.0 
+==> compiler: │ │   └─┬ readdirp@2.0.0 
+==> compiler: │ │     └─┬ readable-stream@2.1.4 
+==> compiler: │ │       └── isarray@1.0.0 
+==> compiler: │ └─┬ webpack-core@0.6.8 
+==> compiler: │   └─┬ source-map@0.4.4 
+==> compiler: │     └── amdefine@1.0.0 
+==> compiler: ├─┬ webpack-dev-server@1.14.1 
+==> compiler: │ ├─┬ compression@1.6.2 
+==> compiler: │ │ ├─┬ accepts@1.3.3 
+==> compiler: │ │ │ └── negotiator@0.6.1 
+==> compiler: │ │ ├── bytes@2.3.0 
+==> compiler: │ │ ├─┬ compressible@2.0.8 
+==> compiler: │ │ │ └── mime-db@1.23.0 
+==> compiler: │ │ ├─┬ debug@2.2.0 
+==> compiler: │ │ │ └── ms@0.7.1 
+==> compiler: │ │ ├── on-headers@1.0.1 
+==> compiler: │ │ └── vary@1.1.0 
+==> compiler: │ ├── connect-history-api-fallback@1.1.0 
+==> compiler: │ ├─┬ express@4.13.4 
+==> compiler: │ │ ├─┬ accepts@1.2.13 
+==> compiler: │ │ │ └── negotiator@0.5.3 
+==> compiler: │ │ ├── array-flatten@1.1.1 
+==> compiler: │ │ ├── content-disposition@0.5.1 
+==> compiler: │ │ ├── content-type@1.0.2 
+==> compiler: │ │ ├── cookie@0.1.5 
+==> compiler: │ │ ├── cookie-signature@1.0.6 
+==> compiler: │ │ ├── depd@1.1.0 
+==> compiler: │ │ ├── escape-html@1.0.3 
+==> compiler: │ │ ├── etag@1.7.0 
+==> compiler: │ │ ├─┬ finalhandler@0.4.1 
+==> compiler: │ │ │ └── unpipe@1.0.0 
+==> compiler: │ │ ├── fresh@0.3.0 
+==> compiler: │ │ ├── merge-descriptors@1.0.1 
+==> compiler: │ │ ├── methods@1.1.2 
+==> compiler: │ │ ├─┬ on-finished@2.3.0 
+==> compiler: │ │ │ └── ee-first@1.1.1 
+==> compiler: │ │ ├── parseurl@1.3.1 
+==> compiler: │ │ ├── path-to-regexp@0.1.7 
+==> compiler: │ │ ├─┬ proxy-addr@1.0.10 
+==> compiler: │ │ │ ├── forwarded@0.1.0 
+==> compiler: │ │ │ └── ipaddr.js@1.0.5 
+==> compiler: │ │ ├── qs@4.0.0 
+==> compiler: │ │ ├── range-parser@1.0.3 
+==> compiler: │ │ ├─┬ send@0.13.1 
+==> compiler: │ │ │ ├── destroy@1.0.4 
+==> compiler: │ │ │ └── statuses@1.2.1 
+==> compiler: │ │ ├─┬ serve-static@1.10.3 
+==> compiler: │ │ │ └── send@0.13.2 
+==> compiler: │ │ ├─┬ type-is@1.6.13 
+==> compiler: │ │ │ └── media-typer@0.3.0 
+==> compiler: │ │ ├── utils-merge@1.0.0 
+==> compiler: │ │ └── vary@1.0.1 
+==> compiler: │ ├─┬ http-proxy@1.13.3 
+==> compiler: │ │ ├── eventemitter3@1.2.0 
+==> compiler: │ │ └── requires-port@1.0.0 
+==> compiler: │ ├─┬ serve-index@1.7.3 
+==> compiler: │ │ ├─┬ accepts@1.2.13 
+==> compiler: │ │ │ └── negotiator@0.5.3 
+==> compiler: │ │ ├── batch@0.5.3 
+==> compiler: │ │ ├── http-errors@1.3.1 
+==> compiler: │ │ └── mime-types@2.1.11 
+==> compiler: │ ├─┬ sockjs@0.3.17 
+==> compiler: │ │ ├─┬ faye-websocket@0.10.0 
+==> compiler: │ │ │ └─┬ websocket-driver@0.6.5 
+==> compiler: │ │ │   └── websocket-extensions@0.1.1 
+==> compiler: │ │ └── uuid@2.0.2 
+==> compiler: │ ├─┬ sockjs-client@1.1.1 
+==> compiler: │ │ ├─┬ eventsource@0.1.6 
+==> compiler: │ │ │ └─┬ original@1.0.0 
+==> compiler: │ │ │   └── url-parse@1.0.5 
+==> compiler: │ │ ├── faye-websocket@0.11.0 
+==> compiler: │ │ ├── json3@3.3.2 
+==> compiler: │ │ └─┬ url-parse@1.1.1 
+==> compiler: │ │   └── querystringify@0.0.3 
+==> compiler: │ ├── stream-cache@0.0.2 
+==> compiler: │ ├─┬ strip-ansi@3.0.1 
+==> compiler: │ │ └── ansi-regex@2.0.0 
+==> compiler: │ ├── supports-color@3.1.2 
+==> compiler: │ └─┬ webpack-dev-middleware@1.6.1 
+==> compiler: │   └── mime@1.3.4 
+==> compiler: └─┬ webpack-merge@0.14.0 
+==> compiler:   ├─┬ lodash.find@3.2.1 
+==> compiler:   │ ├─┬ lodash._basecallback@3.3.1 
+==> compiler:   │ │ ├── lodash._baseisequal@3.0.7 
+==> compiler:   │ │ ├── lodash._bindcallback@3.0.1 
+==> compiler:   │ │ └── lodash.pairs@3.0.1 
+==> compiler:   │ ├── lodash._baseeach@3.0.4 
+==> compiler:   │ ├── lodash._basefind@3.0.0 
+==> compiler:   │ ├── lodash._basefindindex@3.6.0 
+==> compiler:   │ ├── lodash.isarray@3.0.4 
+==> compiler:   │ └── lodash.keys@3.1.2 
+==> compiler:   ├─┬ lodash.isequal@4.2.0 
+==> compiler:   │ ├── lodash._root@3.0.1 
+==> compiler:   │ └── lodash.keys@4.0.7 
+==> compiler:   ├─┬ lodash.isplainobject@3.2.0 
+==> compiler:   │ ├── lodash._basefor@3.0.3 
+==> compiler:   │ ├── lodash.isarguments@3.0.8 
+==> compiler:   │ └── lodash.keysin@3.0.8 
+==> compiler:   └─┬ lodash.merge@3.3.2 
+==> compiler:     ├── lodash._arraycopy@3.0.0 
+==> compiler:     ├── lodash._arrayeach@3.0.0 
+==> compiler:     ├─┬ lodash._createassigner@3.1.1 
+==> compiler:     │ ├── lodash._isiterateecall@3.0.9 
+==> compiler:     │ └── lodash.restparam@3.6.1 
+==> compiler:     ├── lodash._getnative@3.9.1 
+==> compiler:     ├── lodash.istypedarray@3.0.6 
+==> compiler:     └─┬ lodash.toplainobject@3.0.0 
+==> compiler:       └── lodash._basecopy@3.0.1 
+==> compiler: npm
+==> compiler:  
+==> compiler: WARN
+==> compiler:  
+==> compiler: optional
+==> compiler:  Skipping failed optional dependency /chokidar/fsevents:
+==> compiler: npm
+==> compiler:  
+==> compiler: WARN
+==> compiler:  
+==> compiler: notsup
+==> compiler:  Not compatible with your operating system or architecture: fsevents@1.0.12

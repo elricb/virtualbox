@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= name %> sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/index.css" />
+    <script src="<%= uri %>" type="text/javascript"></script>
+    <script type="text/javascript" src="//use.typekit.com/yeb1wrp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <style>
+      .sandbox-component {
+        padding: 1rem;
+        margin-bottom: 4rem;
+      }
+      .sandbox-label {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-transform: none;
+      }
+      .full-width-component .sandbox-component {
+        padding: 1rem 0;
+      }
+      .full-width-component .sandbox-label {
+        margin-left: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="stage"></main>
+    <script type="text/javascript">
+      var React = require('react');
+      var Sandbox = React.createFactory(require('sandbox'));
+      window.view = React.render(Sandbox(), document.getElementById('stage'));
+    </script>
+  </body>
+</html>

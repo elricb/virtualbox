@@ -1,0 +1,20 @@
+/*
+ *  404 page
+ *  Not found
+ *
+ *  Notes: Not found
+ *  TODO: Not found
+ */
+
+.page-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background-color: $notfound;
+
+  img {
+    width: 300px;
+  }
+}

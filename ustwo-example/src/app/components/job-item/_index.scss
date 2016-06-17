@@ -1,0 +1,196 @@
+/*
+ *  JOB ITEM
+ *  A current vacancy item which can be clicked to expand for more information
+ *
+ */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.job-item {
+  $height-small: 50px;
+  $height-large: 70px;
+
+  overflow: hidden;
+  height: $height-small;
+  min-height: $height-small;
+  margin-top: 5px;
+  background: #fff;
+  list-style: none;
+  transition: height .5s ease-in-out;
+
+  .title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: $height-small;
+    padding: 0 15px;
+    line-height: $height-small;
+    font-size: 16px;
+    color: $nonBlack;
+    cursor: pointer;
+  }
+
+  .title-text {
+    flex-basis: auto;
+    flex: 5;
+  }
+
+  .location {
+    display: none;
+    flex: 2;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+  }
+
+  .status-text {
+    display: none;
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 1;
+  }
+
+  .status-icon {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+    .horiz,
+    .vert {
+      position: absolute;
+      background: #ccc;
+    }
+
+    .horiz {
+      width: 15px;
+      height: 3px;
+      top: 6px;
+      left: 0;
+      transition: transform .5s linear;
+    }
+
+    .vert {
+      top: 0;
+      left: 6px;
+      width: 3px;
+      height: 15px;
+      transition: transform .25s linear;
+    }
+  }
+
+  .job-description {
+    padding: 0 15px 15px;
+    font-size: 18px;
+  }
+
+  .description-text {
+    color: $nonBlack;
+  }
+
+  .link {
+    border-bottom: 2px solid #777;
+    color: $nonBlack;
+    transition: color $hover-duration-quick ease-in-out;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &.open {
+
+    &.loading {
+      .status-icon {
+        animation: spin 1000ms infinite linear;
+
+        .vert {
+          display: block;
+        }
+      }
+    }
+
+    &:not(.loading) {
+      .status-icon {
+        .horiz {
+          transform: rotateZ(180deg);
+        }
+        .vert {
+          transform: rotateZ(90deg);
+          transition-delay: .25s;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .title {
+      color: inherit;
+    }
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    height: $height-large;
+    min-height: $height-large;
+
+    .title {
+      height: $height-large;
+      padding: 0 30px;
+      line-height: $height-large;
+      font-size: 18px;
+    }
+
+    .title-text {
+      font-size: 20px;
+    }
+
+    .location {
+      display: block;
+      padding-left: 20px;
+    }
+
+    .location-icon {
+      display: inline-block;
+      width: 11px;
+      height: 16px;
+      margin-right: 10px;
+      margin-top: -1px;
+      vertical-align: middle;
+    }
+
+    .status-text {
+      display: inline-block;
+    }
+
+    .job-description {
+      position: relative;
+      padding: 30px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: 22px;
+        height: 2px;
+        background: $nonBlack;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+    .job-description {
+      width: 50%;
+    }
+  }
+}

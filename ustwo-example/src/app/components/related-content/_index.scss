@@ -1,0 +1,67 @@
+/*
+ *  RELATED CONTENT
+ *  More juice. "Cross sell" style links to blog posts or case studies below the content of the page.
+ *
+ */
+
+.related-content {
+  $padding-medium: $card-padding-medium;
+  $padding-large: $card-padding-large;
+  $gutter-small: 20px;
+  $gutter: 30px;
+  $work-item-exerpt-height: $blog-post-list-item-excerpt-height;
+  $work-item-image-height: $blog-post-list-item-image-height;
+
+  padding: $vertical-spacing 0;
+  background: $nonBlack;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $max-app-width;
+    margin: 0 auto;
+  }
+
+  .more-juice-title {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 120px;
+      margin: 15px auto 30px auto;
+      border: 2px solid $jeezz;
+    }
+  }
+
+  .related-content-item {
+    display: flex;
+
+    .card-item {
+      width: 100%;
+    }
+  }
+
+
+  @media screen and (min-width: $bp-medium) {
+
+    padding: $vertical-spacing-medium 0;
+
+    .related-content-item {
+      width: 50%;
+    }
+
+    .more-juice-title {
+      font-size: 40px;
+    }
+
+
+  }
+
+  @media screen and (min-width: $bp-large) {
+    padding: $vertical-spacing-large 0;
+  }
+
+}

@@ -1,0 +1,74 @@
+/*
+ *  GRID CELL
+ *  On join us page, the unusual ordered grid of boxes
+ *
+ */
+
+.grid-cell {
+  position: relative;
+
+  /* Each box has a different color and background-color, pairs of ustwo palette: wow and softy */
+  @each $colour in $feature-card-colours {
+    $i: index($feature-card-colours, $colour);
+    $wow: nth($colour, 1);
+    $softy: nth($colour, 2);
+    &:nth-child(#{$i}) {
+      .card.feature {
+        background-color: rgba($softy, .3);
+
+        h3 {
+          color: $wow;
+        }
+      }
+    }
+  }
+
+  .card {
+    &.image {
+      height: $jobs-image-height-mobile;
+    }
+    &.feature {
+      padding: $jobs-feature-card-padding-mobile;
+
+      h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        max-width: 680px;
+      }
+    }
+  }
+
+
+  @media screen and (min-width: $bp-medium) {
+    display: flex;
+
+    .card,
+    .card.image { // annoying specificity problem so have to rewrite this with .image
+      height: $jobs-slide-height;
+      padding: $jobs-feature-card-padding;
+
+      &.image,
+      &.feature {
+        flex: 1;
+      }
+
+      &.feature {
+        padding: $jobs-feature-card-padding;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-larger) {
+
+    .card {
+
+      &.feature {
+        flex: 2;
+      }
+    }
+  }
+
+}

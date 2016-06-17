@@ -1,0 +1,255 @@
+/*
+ *  PAGE: BLOG
+ *  Latest posts and category and search functions
+ *
+ */
+
+/* Style each blog post item according to its category colour */
+@each $category, $colour in $blog-categories {
+  .blog-label-#{$category} {
+
+    /* Card items on /blog */
+    &.card-item,
+    &.search-result-list-item {
+      @include card-item-category-colours($colour);
+    }
+
+    /* Styles on post pages and search results */
+    &.page-post {
+      .content-container {
+        .rule,
+        .content a,
+        .author .link a,
+        .single-column hr {
+          border-color: $colour;
+        }
+
+        .category-tag {
+          background-color: $colour;
+        }
+      }
+    }
+
+    &.search-result-list-item {
+      .tail a {
+        border-color: $colour;
+      }
+    }
+
+    .quote-block {
+      .quote-mark {
+        svg {
+          fill: $colour;
+        }
+      }
+      .quote {
+        color: $colour;
+      }
+      .source {
+        color: $darkGrey;
+      }
+    }
+  }
+}
+
+.page-blog {
+  background-color: $lightGrey;
+
+  .hero-transition-manager {
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    background: $blu;
+
+    .hero {
+      .blog-controls {
+        transition: opacity .32s ease-in-out;
+      }
+
+      &.add {
+        opacity: 1;
+
+        .blog-controls {
+          opacity: 0;
+        }
+      }
+
+      &.add.show {
+        .blog-controls {
+          opacity: 1;
+          transition-duration: .5s;
+          transition-delay: 2s;
+        }
+      }
+
+      &.hide {
+        opacity: 0;
+        transition: opacity .32s ease-in-out;
+
+        .blog-controls {
+          opacity: 0;
+        }
+      }
+    }
+
+    .search {
+      transition: opacity .32s ease-in-out;
+
+      &.add {
+        opacity: 0;
+
+        .search-form {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        .cancel-search {
+          opacity: 0;
+        }
+
+        .search-form,
+        .cancel-search {
+          transition: opacity .32s ease-in-out, transform 0s linear .5s;
+        }
+      }
+
+      &.show {
+        opacity: 1;
+
+        .search-form {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .cancel-search {
+          opacity: 1;
+        }
+
+        .search-form,
+        .cancel-search {
+          transition: all .32s ease-in-out;
+          transition-delay: .5s;
+        }
+      }
+
+      &.hide {
+        opacity: 0;
+
+        .search-form,
+        .cancel-search {
+          transition: none;
+        }
+      }
+    }
+  }
+
+  .hero {
+    width: 100%;
+
+    .title {
+      margin-top: -12vh;
+    }
+
+    .rimage {
+      top: 42%;
+      max-width: 450px;
+      opacity: .4;
+    }
+  }
+
+  .blog-post-list {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity .2s ease-in-out, transform .32s ease-in-out;
+  }
+
+  .message {
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: top;
+    background: $blu;
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 70px;
+    height: 170px;
+
+    h3 {
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+    }
+
+    .loading-icon {
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+
+  &.empty {
+    .blog-post-list {
+      max-width: none;
+    }
+    .load-more-button {
+      display: none;
+    }
+  }
+
+  .blog-controls .blog-filter {
+    .selected:after {
+      display: block;
+    }
+    .loading-icon {
+      display: none;
+    }
+  }
+
+  &.loading {
+    .blog-post-list {
+      opacity: 0;
+      transform: translateY(100px);
+      transition-delay: .62s, .5s;
+    }
+
+    .blog-controls .blog-filter {
+      .loading-icon {
+        display: block;
+      }
+    }
+  }
+
+  &.empty {
+    .blog-post-list {
+      padding: 0;
+    }
+  }
+
+
+  @media screen and (min-width: $bp-medium) {
+
+    &.categorised {
+      .down-chevron {
+        display: none;
+      }
+      .blog-post-list {
+        .message {
+          margin-top: 30px;
+          padding-bottom: 0;
+        }
+        .message,
+        .blog-post-list-item {
+          position: relative;
+        }
+      }
+    }
+
+    .load-more {
+      margin: 0;
+
+      .load {
+        padding: 0 150px;
+        width: auto;
+      }
+    }
+  }
+}

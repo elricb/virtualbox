@@ -1,0 +1,1 @@
+console.error("ReferenceError: [BABEL] /home/ustwo/src/app/index.js: Unknown option: /home/ustwo/.babelrc.presets while parsing file: /home/ustwo/src/app/index.js");

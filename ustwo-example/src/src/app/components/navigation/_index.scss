@@ -1,0 +1,178 @@
+/*
+ *  NAVIGATION / HEADER
+ *  Includes the site navigation and logo
+ *
+ *  Notes: Should this component be called header?
+ */
+
+// .nav-wrapper {
+//   position: absolute;
+//   z-index: 9999;
+//   width: 100%;
+// }
+
+.header {
+  position: absolute;
+  z-index: 9999;
+  display: block;
+  width: 100%;
+  height: $nav-height;
+
+  .navigation {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    color: white;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  }
+
+  .logo {
+    overflow: hidden;
+    display: block;
+    width: 100px;
+    height: $nav-height;
+    margin-left: 20px;
+
+    svg {
+      width: 100px;
+      height: $nav-height;
+      fill: white;
+      transition: fill .2s ease-in-out;
+    }
+  }
+
+  .navigation-link {
+    display: block;
+    font-family: $PxGroteskRegular;
+    font-size: 16px;
+    line-height: 24px;
+
+    a {
+      padding-bottom: 3px;
+      transition: color .2s ease-in-out;
+    }
+
+    a:hover,
+    &.selected a {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  .navigation-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: fill .2s ease-in-out;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    ul {
+      display: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .navigation-link:first-child {
+      display: none;
+    }
+  }
+
+  &.takeover {
+
+    .navigation-toggle,
+    .menu {
+      display: none;
+    }
+  }
+
+  /* Header is not overlayed onto content for post and event pages */
+  &.post,
+  &.event {
+    position: relative;
+
+    .navigation {
+      color: $nonBlack;
+      background-color: #fff;
+
+      .logo svg,
+      .navigation-toggle {
+        fill: $nonBlack;
+      }
+    }
+    .navigation-link {
+      &.selected a,
+      a:hover {
+        border-bottom: 2px solid $nonBlack;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+    .navigation-toggle {
+      display: none;
+    }
+
+    .logo {
+      margin-left: 30px;
+    }
+
+    .menu ul {
+      display: block;
+      position: static;
+      margin-right: 30px;
+    }
+
+    .navigation-link {
+      display: inline-block;
+      line-height: $nav-height;
+      margin-left: 40px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/* TEMP */
+/* Invert colours on some pages that have lighter backgrounds */
+.header.takeover,
+.header.case-study,
+.header.search,
+.app-404 .header {
+  .navigation {
+    color: $nonBlack;
+
+    .logo svg,
+    .navigation-toggle {
+      fill: $nonBlack;
+    }
+  }
+  .navigation-link {
+    &.selected a,
+    a:hover {
+      border-bottom: 2px solid $nonBlack;
+    }
+  }
+}
+
+/* If js is supported, header animates in when class 'show' is added */
+.js .nav-wrapper {
+  .header {
+    transform: translateY(-68px);
+  }
+
+  &.show {
+    .header {
+      transition: transform 0.5s ease-out, background-color .2s ease-in-out;
+      transform: translateY(0px);
+    }
+  }
+}

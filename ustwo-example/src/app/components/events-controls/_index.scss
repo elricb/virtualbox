@@ -1,0 +1,66 @@
+/*
+ *  EVENT CONTROLS
+ *
+ */
+
+.events-controls {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
+  background-color: $lightGrey;
+
+  li {
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+    font-family: $Futura;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $softPassion;
+    transition: opacity $hover-duration-quick ease-in-out;
+
+    &[aria-selected="true"] {
+      border-bottom: 4px solid;
+    }
+
+    &:hover:not([aria-selected="true"]) {
+      opacity: $hover-fade-back;
+    }
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    display: block;
+    bottom: calc(#{$events-controls-margin-bottom} - #{$events-margin-offset});
+    background-color: transparent;
+
+    li {
+      color: #fff;
+
+      &:not(:first-child) {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+      li {
+        font-size: 26px;
+
+        &.all-studios {
+          span:last-child {
+            display: inline;
+          }
+        }
+      }
+  }
+
+}

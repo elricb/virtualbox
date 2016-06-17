@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/app":{"guestpath":"/home/app","hostpath":"/Users/elricb/Projects/dev-tools/projects/virtualbox/ustwo-example","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/elricb/Projects/dev-tools/projects/virtualbox/ustwo-example","disabled":false}}}

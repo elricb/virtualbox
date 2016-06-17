@@ -1,0 +1,102 @@
+/*
+ *  COLOURS
+ *  A collection of all the colours used throughout the site as individual variables or grouped into palettes
+ *
+ *  TODO: Extract .u-{xxx} stuff at the bottom into a different component
+*/
+
+
+/* ustwo */
+$piglet      : #ED0082;
+$softPiglet  : #FFA5BE;
+$passion     : #E60C29;
+$marshPassion: #F9615B; /* TODO: is there a reason we are breaking from the ustwo palette and not using softPassion ? */
+$softPassion : #FA7D78;
+$ohra        : #FF5519;
+$softOhra    : #FFC39B;
+$honey       : #FFBF02;
+$softHoney   : #F5E664;
+$jeezz       : #96CC29;
+$softJeezz   : #C8E691;
+$pot         : #14C04D;
+$softPot     : #A5FAAF;
+$mare        : #16D6D9;
+$softMare    : #A5FAFA;
+$blu         : #009CF3;
+$softBlu     : #A5E1FF;
+$navy        : #143FCC;
+$softNavy    : #5FB6FA;
+$rain        : #6114CC;
+$softRain    : #C382E6;
+
+/* monochrome */
+$white       : #FFFFFF;
+$offWhite    : #F8F8F8;
+$lightGrey   : #E8E8E8;
+$midGrey     : #BFBFBF;
+$darkGrey    : #646464;
+$nonBlack    : #333333;
+
+/* other */
+$twitter     : #32abe2;
+$facebook    : #3a5998;
+$linkedin    : #007bb5;
+$notfound    : #f7e370;
+
+
+/* Palettes */
+
+$ustwo-palette: (
+  piglet: $piglet,
+  softPiglet: $softPiglet,
+  passion: $passion,
+  marshPassion: $marshPassion,
+  softPassion: $softPassion,
+  ohra: $ohra,
+  softOhra: $softOhra,
+  honey: $honey,
+  softHoney: $softHoney,
+  jeezz: $jeezz,
+  softJeezz: $softJeezz,
+  pot: $pot,
+  softPot: $softPot,
+  mare: $mare,
+  softMare: $softMare,
+  blu: $blu,
+  softBlu: $softBlu,
+  navy: $navy,
+  softNavy: $softNavy,
+  rain: $rain,
+  softRain: $softRain
+);
+
+$blog-categories: (
+  business: $blu,
+  culture: $piglet,
+  design: $pot,
+  development: $ohra,
+  process: $mare,
+  ux: $jeezz,
+  apps: $rain,
+  product: $navy,
+  innovation: $passion
+);
+
+$work-categories: (
+  work: $blu,
+  venture: $pot,
+  ustwo: $piglet
+);
+
+$feature-card-colours:  $navy $softNavy,
+                        $honey $softHoney,
+                        $pot $softPot,
+                        $blu $softBlu,
+                        $piglet $softPiglet,
+                        $ohra $softOhra;
+
+$social-media-colours: (
+  twitter: $twitter,
+  facebook: $facebook,
+  linkedin: $linkedin
+);

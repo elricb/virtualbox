@@ -1,0 +1,13 @@
+/*
+ *  WORK ITEM
+ *  Short excerpts and images of each blog post on the main /blog page
+ *
+ */
+
+@each $category, $colour in $work-categories {
+  .work-label-#{$category} {
+    &.card-item {
+      @include card-item-category-colours($colour);
+    }
+  }
+}

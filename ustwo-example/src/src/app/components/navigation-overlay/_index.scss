@@ -1,0 +1,38 @@
+/*
+ *  NAVIGATION OVERLAY
+ *  Mobile menu
+ *
+ */
+
+.navigation-overlay {
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: block;
+  height: 100vh;
+  background-color: #fff;
+  text-align: center;
+
+  .close-button {
+    fill: $nonBlack;
+  }
+
+  .menu {
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100% - 75px - 100px);
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $bp-large) {
+    display: none;
+  }
+}

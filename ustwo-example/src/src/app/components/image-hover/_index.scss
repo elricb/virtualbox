@@ -1,0 +1,42 @@
+/*
+ *  IMAGE HOVER
+ *  Hover over large image links
+ *
+ *  TODO: Repeats code from down-chevron, consolidate to svg-sequence component?
+ */
+
+.image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba($mare, .7);
+  opacity: 0;
+  transition: opacity .32s ease-in-out;
+
+  g:not(:last-child) {
+    display: none;
+  }
+
+  svg {
+    width: 100px;
+    fill: $white;
+  }
+
+  &:hover,
+  &.hover {
+    opacity: 1;
+  }
+}
+
+.js .image-hover g {
+  display: inline;
+
+  &:not(:first-child) {
+    display: none;
+  }
+}

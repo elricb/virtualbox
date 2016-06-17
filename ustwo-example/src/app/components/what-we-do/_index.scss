@@ -1,0 +1,35 @@
+/*
+ *  PAGE: WHAT WE DO / WORK
+ *  Landing page to see examples of past projects
+ *
+ */
+
+.page-work {
+  background-color: $lightGrey;
+
+  .hero {
+    background-color: $pot;
+
+    .rimage {
+      max-width: 600px;
+      opacity: .7;
+    }
+  }
+
+  .hero + .single-column {
+    background: white;
+
+    /* Following modified padding-bottom because the grid content is pushed up
+       over the single-column content, more white space needed */
+    @media screen and (min-width: $bp-medium) {
+      padding-bottom: calc(50px + 14vh);
+    }
+    @media screen and (min-width: $bp-large) {
+      padding-bottom: calc(100px + 14vh);
+    }
+  }
+
+  .single-column .content {
+    text-align: center;
+  }
+}

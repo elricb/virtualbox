@@ -1,0 +1,143 @@
+/*
+ *  STUDIO CONTACT
+ *  Studio info in the footer
+ *
+ */
+
+.studio {
+  position: relative;
+  border-bottom: 1px solid $nonBlack;
+  list-style: none;
+  transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+
+  &.malmo {
+    .postal-code {
+      float: left;
+      margin-right: 7px;
+    }
+  }
+
+  .clock {
+    display: none;
+  }
+
+  .studio-title {
+    margin: 0;
+    padding: 20px 6.25%;
+    font-size: 24px;
+    font-family: $PxGroteskRegular;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 6px;
+      right: 6.25%;
+      display: block;
+      font-size: 45px;
+      color: $offWhite;
+    }
+  }
+
+  .studio-details {
+    overflow: hidden;
+    height: 0;
+    padding: 0 6.25%;
+    transition: height 0.3s ease-in-out;
+
+    .vcard {
+      padding: 0;
+
+      p {
+        font-size: 14px;
+      }
+
+      .adr {
+
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+        abbr {
+          border-bottom: 0;
+        }
+      }
+
+      .map {
+        display: inline-block;
+        margin-top: 20px;
+        border-bottom: 2px solid $darkGrey;
+        font-size: 14px;
+        transition: border-color $hover-duration-quick ease-in-out;
+
+        &:hover {
+          border-color: $offWhite !important;
+        }
+      }
+    }
+  }
+  &.open {
+    .studio-title::after {
+      content: '\2013';
+    }
+    .studio-details {
+      height: 160px;
+
+      .map {
+        border-bottom-color: $offWhite;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    height: 230px;
+    border-bottom: none;
+    vertical-align: top;
+    transition-duration: 0s;
+
+    &.open {
+      background-color: transparent !important;
+      border-bottom-color: transparent !important;
+
+      .studio-details .map {
+        border-bottom-color: $darkGrey;
+      }
+    }
+    .studio-title {
+      padding: 0 0 15px;
+      cursor: auto;
+
+      &::after {
+        display: none;
+      }
+    }
+    .studio-details {
+      height: auto;
+      padding: 0;
+
+      .vcard {
+        padding: 0;
+      }
+
+      .map {
+        position: absolute;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+    height: auto;
+
+    .clock {
+      display: block;
+    }
+
+    .studio-details {
+      .map {
+        position: relative;
+      }
+    }
+  }
+
+}

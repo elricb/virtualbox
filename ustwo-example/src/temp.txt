@@ -1,0 +1,18 @@
+
+aliasify autoprefixer babel babelify browserify browsernizr classnames chai consolidate ellipsize es6-promise
+postcss postcss-cli he hex-rgb isomorphic-fetch jsdom lodash mocha moment normalize-libsass persistify react
+react-helmet react-responsive react-transition-manager rgb-hex route-pattern scrollmagic sinon sinon-chai
+svg4everybody urllite uglify-js wd chai-as-promised babel-loader babel-preset-es2015 babel-preset-react
+extract-text-webpack-plugin html-webpack-plugin path react react-dom webpack webpack-dev-server webpack-merge
+
+
+
+aliasify classnames consolidate ellipsize es6-promise express glob he hex-rgb isomorphic-fetch lodash moment
+react react-helmet react-responsive react-transition-manager rgb-hex route-pattern scrollmagic svg4everybody
+urllite
+
+react-helmet
+react-transition-manager
+react-responsive
+iconv-loader
+rgb-hex

@@ -1,0 +1,60 @@
+/*
+ *  QUOTE BLOCK
+ *  Styling for quotes mid- content
+ *
+ */
+
+.quote-block {
+  padding: 90px 6.25% 50px;
+
+  .quote-mark {
+    max-width: 680px;
+    margin: 0 auto;
+    transform: translate(-10px, -90px);
+
+    svg {
+      position: absolute;
+      z-index: 1;
+      width: 90px;
+      height: 140px;
+      fill: $offWhite;
+      opacity: 0.3;
+    }
+  }
+
+  .quote {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+    color: $offWhite;
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.3em;
+  }
+
+  .source {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    font-family: $PxGroteskBold;
+    color: $offWhite;
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    padding: 140px 6.25% 80px;
+
+    .quote-mark {
+      transform: translate(-30px, -90px);
+
+      svg {
+        width: 120px;
+      }
+    }
+
+    .quote {
+      font-size: 50px;
+    }
+  }
+}

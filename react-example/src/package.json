@@ -1,0 +1,33 @@
+{
+  "name": "react-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "sample react VB",
+  "main": "app/index.jsx",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --progress --colors -p",
+    "start": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 8080"
+  },
+  "keywords": [
+    "react",
+    "vagrant",
+    "virtualbox",
+    "webpack"
+  ],
+  "author": "elric",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.19.0",
+    "path": "^0.12.7",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "~1.14.1",
+    "webpack-merge": "~0.14.0"
+  }
+}

@@ -1,0 +1,21 @@
+#ustwo servers
+
+Vagrant.configure("2") do |config|
+    config.vm.provision :shell, inline: "echo React Multi-Machine Setup"
+
+    config.vm.define "webserver", autostart: false, primary: true do |webserver|
+        config.vm.box = "ubuntu/trusty64"
+        config.vm.provision :shell, path: "bootstrap.webserver.sh"
+        config.vm.synced_folder "./public", "/home/app", type: "rsync", rsync__exclude: [".git/","node_modules/"]
+    end
+
+    config.vm.define "compiler" do |compiler|
+        config.vm.box = "ubuntu/trusty64"
+        config.vm.provision :shell, path: "bootstrap.compiler.sh"
+        config.vm.network :forwarded_port, guest: 8080, host: 8080
+        config.vm.network :forwarded_port, guest: 8888, host: 8888
+        config.vm.network :forwarded_port, guest: 5858, host: 5858
+        config.vm.network :forwarded_port, guest: 80, host: 8081
+        config.vm.synced_folder "./", "/home/app" #, type: "rsync", rsync__exclude: [".git/","src/node_modules/"]
+    end
+end

@@ -48,7 +48,7 @@ vim Vagrantfile
       config.vm.box = "hashicorp/precise64"
       config.vm.provision :shell, path: "bootstrap.sh"
       config.vm.network :forwarded_port, guest: 80, host: 4567
-      config.vm.synced_folder "src/", "/srv/website"
+      config.vm.synced_folder "src/", "/srv/website", type: "rsync", rsync__exclude: [".git/","node_modules/"]
     end
 vagrant reload --provision
 </code></pre>
@@ -74,6 +74,11 @@ vagrant up
 curl -i http://127.0.0.1:8080
 vagrant global-status
 </code></pre>
+
+## React Example
+Still has issues with synced_folders and updating the site on the fly.  Having to refresh is annoying.
+
+
 
 
 ## Kill a Rouge Process

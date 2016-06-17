@@ -1,0 +1,38 @@
+/*
+ *  ARCHIVED EVENT LIST ITEM
+ *
+ */
+
+ .card-item.archived-events-list-item {
+
+  .card-image {
+    background-color: $softPassion;
+
+    .rimage {
+      transition: transform $hover-duration-quick ease-out;
+      -webkit-filter: sepia(0.6);
+      filter: sepia(0.6);
+      opacity: 0.3;
+    }
+  }
+
+  .date {
+    margin-bottom: $card-padding-small - 5px;
+    margin-top: 5px;
+    color: $softPassion;
+    font-family: $PxGroteskRegular;
+    font-size: 16px;
+  }
+
+  .excerpt p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .tail a {
+    border-bottom: 2px solid $softPassion;
+  }
+ }

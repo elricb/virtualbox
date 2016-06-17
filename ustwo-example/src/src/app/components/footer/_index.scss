@@ -1,0 +1,236 @@
+/*
+ *  FOOTER
+ *  The bottom bit of the internet website
+ *
+ */
+
+.footer {
+  background: #252525;
+  font-family: PxGrotesk-Regular, Arial, sans-serif;
+  color: $offWhite;
+
+  .content {
+    overflow: auto;
+    padding: 40px 0 0 0;
+
+    .general {
+      padding: 0 6.25%;
+    }
+
+    .contact-title {
+      font-size: 24px;
+      font-family: $PxGroteskRegular;
+      text-transform: capitalize;
+    }
+    .contact-divider {
+      width: 16px;
+      margin: 15px 0;
+      border: 1px solid $offWhite;
+    }
+    .email-cta {
+      position: relative;
+      display: inline-block;
+      width: 150px;
+      height: 40px;
+      margin: 0;
+      margin-top: 2px;
+      padding: 0 35px 0 15px;
+      background: $offWhite;
+      line-height: 40px;
+      color: $nonBlack;
+      font-size: 18px;
+
+      &:after {
+        @include arrow-icon(#F9615B);
+
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 13px;
+        height: 10px;
+        margin-top: -5px;
+        background-position: 0 0;
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        border-bottom-color: $offWhite;
+      }
+    }
+
+    .social {
+      list-style: none;
+      padding: 0;
+      margin: 45px 0;
+      width: 150px;
+
+      .channel {
+        display: inline-block;
+        margin-right: 22px;
+        margin-bottom: 22px;
+
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
+
+        &:nth-last-child(-n+2) {
+          margin-bottom: 0;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
+          width: 35px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          transition: all $hover-duration-quick ease-in-out;
+        }
+        .logo {
+          width: 21px;
+          height: 21px;
+          fill: #fff;
+        }
+        .name {
+          display: none;
+        }
+
+        &.facebook {
+          a:hover {
+            background-color: #3A5998;
+            border-color: #3A5998;
+          }
+        }
+        &.twitter {
+          a:hover {
+            background-color: #32ABE2;
+            border-color: #32ABE2;
+          }
+        }
+        &.linkedin {
+          a:hover {
+            background-color: #069;
+            border-color: #069;
+          }
+        }
+        &.github {
+          a:hover {
+            background-color: #4183c4;
+            border-color: #4183c4;
+          }
+        }
+        &.instagram {
+          a:hover {
+            background-color: #517fa4;
+            border-color: #517fa4;
+          }
+        }
+        &.dribbble {
+          a:hover {
+            background-color: #ea4c89;
+            border-color: #ea4c89;
+          }
+        }
+      }
+    }
+
+    .studios {
+      border-top: 1px solid $nonBlack;
+    }
+
+    .copyright {
+      clear: both;
+      padding-top: 60px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+
+      ul {
+        padding: 30px 0;
+        border-top: 1px solid #333;
+        font-size: 12px;
+      }
+
+      li {
+        display: block;
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+
+  @media screen and (min-width: $bp-medium) {
+    
+    .content,
+    .subscription {
+      max-width: $max-app-width;
+      margin: 0 auto;
+    }
+
+    .content {
+      padding: 100px 6% 0 6%;
+
+      .general {
+        float: left;
+        width: 33%;
+        padding: 0;
+      }
+
+      .contact-title {
+        margin-bottom: 15px;
+      }
+
+      .contact-divider {
+        display: none;
+      }
+
+      .studios {
+        float: left;
+        width: 67%;
+        border-top: none;
+
+        .studio {
+          float: left;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+    .content {
+      padding: 0 6%;
+
+      .general {
+        width: 20%;
+        margin-top: 140px;
+      }
+      .studios {
+        width: 80%;
+
+        .studio {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-larger) {
+    .content {
+
+      .copyright {
+        ul {
+          li {
+            display: inline-block;
+            width: 33%;
+          }
+        }
+      }
+    }
+  }
+}

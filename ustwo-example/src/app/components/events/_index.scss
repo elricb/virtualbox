@@ -1,0 +1,118 @@
+/*
+ *  PAGE: Events
+ *  Landing page to see upcoming and past events
+ *
+ */
+
+.page-events {
+  background-color: #eaeaea;
+
+  .hero {
+    background-color: $softPassion;
+  }
+
+  p.subheading {
+    position: relative;
+    z-index: 2;
+  }
+
+  .events-list {
+    max-width: 1380px;
+    margin: 0 auto;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity .2s ease-in-out, transform .32s ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+
+  .no-events-found {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $offWhite;
+    padding: 40px;
+    text-align: center;
+    
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 40px;
+
+      a {
+        transition: color 0.2s ease-in-out;
+        border-bottom: 2px solid;
+        border-color: #333;
+      }
+    }
+
+    .flying-cow {
+        vertical-align: middle;
+        height: 210px;
+        width: 280px;
+    }
+  }
+
+  .archived-events {
+    margin-top: 120px;
+
+    h2.sub-title {
+      text-align: center;
+    }
+
+    .rule {
+      width: 184px;
+      border-bottom: 4px solid;
+      border-top: none;
+      border-left: none;
+      border-right: none;   
+      border-color: $softPassion;
+      margin: 30px auto;
+    }
+
+    .card-list {
+      margin-top: 0;
+    }
+  }
+  
+  &.loading {
+
+    .events-list {
+      opacity: 0;
+      transform: translateY(100px);
+      transition-delay: .62s, .5s;
+    }
+    .load-more-button {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $bp-medium) {
+
+    .events-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 $events-gutter-large $events-gutter-large $events-gutter-large;
+      margin-top: -14vh;
+    }
+
+    .archived-events-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: $events-gutter-large;
+    }
+
+    .down-chevron {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+
+    .load-more-button {
+      padding: 0;
+    }
+  }
+}
+

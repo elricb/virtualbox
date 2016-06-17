@@ -1,0 +1,207 @@
+/*
+ *  EVENTS LIST ITEM
+ *  Short excerpts and images of each event listed in the event hub page
+ *
+ */
+
+.events-list-item {
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0 10px;
+  width: 100%;
+
+  .date {
+    padding: $card-padding-medium $card-padding-medium 0 $card-padding-medium;
+    order: 2;
+    color: $softPassion;
+    background-color: $offWhite;
+    margin: 0;
+    font-size: 25px;
+
+    .day {
+      margin-right: 5px;
+    }
+  }
+
+  .details {
+    position: relative;
+    padding: 0 $card-padding-medium $card-padding-medium $card-padding-medium;
+    background-color: $offWhite;
+    order: 3;
+    width: 100%;
+
+    .title {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+
+      a {
+        transition: color $hover-duration-quick ease-in-out;
+      }
+    }
+
+    .location-icon {
+        display: inline-block;
+        width: 15px;
+        height: 19px;
+        fill: $softPassion;
+        margin-right: 5px;
+        margin-top: 2px;
+        vertical-align: middle;
+    }
+
+    .excerpt p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    p.meta {
+      padding: 10px 0;
+      margin: 0;
+
+      .location a {
+        transition: color 0.2s ease-in-out;
+        border-bottom: 2px solid;
+        border-color: $softPassion;
+
+        &:hover {
+          color: $softPassion;
+        }
+      }
+
+      .time {
+        padding-left: 15px;
+      }
+    }
+
+    .tail {
+      margin-top: 30px;
+
+      a.read-more {
+          transition: color 0.2s ease-in-out;
+          border-bottom: 2px solid;
+          border-color: $softPassion;
+
+          &:hover {
+            color: $softPassion;
+          }
+
+      }
+    }
+  }
+
+  .event-image {
+    display: block;
+    overflow: hidden;
+    order: 1;
+    width: 100%;
+
+    .rimage {
+      height: 180px;
+      cursor: pointer;
+      transition: transform $hover-duration-quick ease-out;
+    }
+
+    &:hover {
+      .rimage {
+        transform: scale($hover-scale-up);
+      }
+    }
+
+    > a {
+      position: relative;
+      display: block;
+
+      .image-hover {
+        background: rgba($softPassion, .7);
+      }
+    }
+  }
+
+  &.featured {
+    padding: 0;
+
+    .details {
+
+      .title {
+        -webkit-line-clamp: 4;
+      }
+
+      .excerpt p {
+        -webkit-line-clamp: 5;
+      }
+    }
+
+    .event-image {
+
+      .rimage {
+        height: 320px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+    background-color: $offWhite;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .date {
+      order: 1;
+      flex: 0.5;
+      padding: $card-padding-medium 0 $card-padding-medium $card-padding-medium;
+      text-align: right;
+
+      .day {
+        font-size: 80px;
+        display: block;
+        margin-right: 0;
+      }
+
+      .month {
+        display: block;
+        font-size: 20px;
+      }
+    }
+
+    .details {
+      padding: $card-padding-medium $card-padding-medium;
+      order: 2;
+      flex: 1.5;
+
+      .title {
+        font-size: 35px;
+      }
+
+    }
+
+    .event-image {
+      order:3;
+      flex: 2.5;
+
+      .rimage {
+        height: 300px;
+      }
+    }
+
+    &.featured {
+
+      .event-image {
+
+        .rimage {
+          height: 500px;
+        }
+      }
+    }
+
+  }
+}
