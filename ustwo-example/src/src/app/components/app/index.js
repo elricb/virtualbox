@@ -30,16 +30,16 @@ import NavigationOverlay from 'app/components/navigation-overlay';
 import PageLoader from 'app/components/page-loader';
 
 const pageMap = {
-  'home': require('app/components/home'),
-  'what-we-do': require('app/components/what-we-do'),
-  'what-we-do/case-study': require('app/components/case-study'),
-  'blog': require('app/components/blog'),
-  'blog/post': require('app/components/post'),
-  'blog/search-results': require('app/components/search-results'),
-  'legal': require('app/components/legal'),
-  'join-us': require('app/components/join-us'),
-  'events': require('app/components/events'),
-  'events/event': require('app/components/event')
+    'home': require('app/components/home'),
+    'what-we-do': require('app/components/what-we-do'),
+    'what-we-do/case-study': require('app/components/case-study'),
+    'blog': require('app/components/blog'),
+    'blog/post': require('app/components/post'),
+    'blog/search-results': require('app/components/search-results'),
+    'legal': require('app/components/legal'),
+    'join-us': require('app/components/join-us'),
+    'events': require('app/components/events'),
+    'events/event': require('app/components/event')
 };
 
 const spinnerBlacklist = ['legal', 'blog/search-results'];

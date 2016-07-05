@@ -16,7 +16,7 @@ const PATHS = {
 };
 
 const BASE_ROOT = [
-  path.resolve(__dirname, 'src/app'),
+  path.resolve(__dirname, 'app'),
   path.resolve(__dirname, 'node_modules')
 ];
 
