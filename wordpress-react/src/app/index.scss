@@ -1,0 +1,18 @@
+#app {
+    ul.menu {
+        list-style-type: none;
+
+        li {
+            display:inline-block;
+            padding:4px;
+            margin:4px;
+            border:1px solid #999;
+            background-color:#DDD;
+        }
+
+        .active {
+            color:#111;
+            text-decoration: none;
+        }
+    }
+}
